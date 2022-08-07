@@ -52,7 +52,7 @@ func Test_Datestr2time(t *testing.T) {
 }
 
 func TestEncodeLine(t *testing.T) {
-	line := "<loglist><log module_name=\"TMCS Monitor\" app_path=\"/usr/local/Lemz/tmcs/monitor/tmcs_monitor\" app_pid=\"4913\" thread_id=\"\" time=\"29052021000147040\" ulid=\"0001GB313BF4HPFYCDY3QTZ6A6\" type=\"3\" message=\"Состояние '[192.168.1.120] Cервер КС_RLI/КСВ Топаз' изменилось на 'Ошибка'\" ext_message=\"Context:  -- void tmcs::AbstractMonitor::onComponentStateChanged(QUuid); ../../../../src/libs/tmcs_plugin/src/AbstractMonitor.cpp:686\"/></loglist>"
+	line := "<loglist><log module_name=\" Monitor\" app_path=\"/usr/local//monitor/\" app_pid=\"4913\" thread_id=\"\" time=\"29052021000147040\" ulid=\"0001GB313BF4HPFYCDY3QTZ6A6\" type=\"3\" message=\"Состояние '[192.168.1.120] Cервер ' изменилось на 'Ошибка'\" ext_message=\"Context:  -- void ::AbstractMonitor::onComponentStateChanged(QUuid); ../../../../src/libs/src/123.cpp:686\"/></loglist>"
 
 	type args struct {
 		line string
@@ -95,7 +95,7 @@ func TestDecodeLine(t *testing.T) {
 		{
 			name: "TestDecodeLine",
 			args: args{line: line2}, //"01FNBRJ7B8JEJYMFD82F0TFDC0"
-			want: "<loglist><log module_name=\"7TMCS TEST\" app_path=\"/3/TEST/TEST\" app_pid=\"290\" thread_id=\"2\" time=\"29052021000147040\" ulid=\"01FNBRJ7B8JEJYMFD82F0TFDC0\" type=\"2\" message=\"Состояние '98.121.181.128Cервер КС_UDP/Пинг'\" ext_message=\"Context:  -- void tmcs::AbstractMonitor::,Greater London\"></loglist>",
+			want: "<loglist><log module_name=\" TEST\" app_path=\"/3/TEST/TEST\" app_pid=\"290\" thread_id=\"2\" time=\"29052021000147040\" ulid=\"01FNBRJ7B8JEJYMFD82F0TFDC0\" type=\"2\" message=\"Состояние '98.121.181.128Cервер КС_UDP/Пинг'\" ext_message=\"Context:  -- void ::AbstractMonitor::,Greater London\"></loglist>",
 		},
 	}
 

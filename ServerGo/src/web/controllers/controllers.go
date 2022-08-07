@@ -256,7 +256,7 @@ func ViewDir(conn *websocket.Conn, search string) {
 	//Пагинация из первых ulid см как для отдельных файлов
 	var fileList = make(map[string][]string)
 	files, _ := ioutil.ReadDir(pathdata + "/repdata")
-	//"/home/nik/projects/Course/tmcs-log-agent-storage/"
+	//"/home/nik/projects/Course/-log-agent-storage/"
 	//"./view"
 	countFiles := (len(files))
 	conn.WriteMessage(websocket.TextMessage, []byte("Indexing file, please wait"))

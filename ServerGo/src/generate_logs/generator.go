@@ -55,11 +55,11 @@ const (
 func StructFile(count string) string {
 	elem := "\""
 	r := rand.New(rand.NewSource(99))
-	XML_DETAILS := "Context:  -- void tmcs::AbstractMonitor::,"
+	XML_DETAILS := "Context:  -- void ::AbstractMonitor::,"
 	now := time.Now().UnixNano()
 	entropy := rand.New(rand.NewSource(now))
 	timestamp := ulid.Timestamp(time.Now())
-	XML_APPNAME := strconv.Itoa(r.Intn(10)) + "TMCS TEST"
+	XML_APPNAME := strconv.Itoa(r.Intn(10)) + " TEST"
 	XML_APPPATH := "/" + strconv.Itoa(r.Intn(10)) + "/TEST/TEST"
 	XML_APPPID := string(util.GetOutboundIP()[len(util.GetOutboundIP())-3:]) + "0" + count //strconv.Itoa(r.Intn(1000)) + "" // "7481,"
 	XML_THREAD := strconv.Itoa(r.Intn(10)) + ""                                            //"88,"
