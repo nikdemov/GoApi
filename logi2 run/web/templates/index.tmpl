@@ -1,0 +1,120 @@
+<< define "index" >>
+<html>
+<<template "header" .>>
+  <body style="background-color:#F2F2F2;" ng-app="logi2" >
+  
+    <div class ="headContent"  ng-controller="mainController as mc"  ng-cloak>
+      <md-toolbar class="md-hue-2 md-whiteframe-z3">
+        <div class="md-toolbar-tools">
+          <section layout="row" flex>
+            <div ng-click="mc.toggleSideNav()" layout="column" class="md-padding">
+              <h2>Logi2</h2>
+            </div>
+      
+            <div flex layout-align="center center" layout="column">
+              <h3 id="filename"></h3>
+            </div>
+            <div class="bg-light clearfix">
+                <button class="btnR btn-primary float-right"
+                        type="button" id="res" (click)=”handleClick($event)”  >
+                     RESET
+                </button>
+            </div>
+          </section>
+        </div>
+      </md-toolbar>
+      <!--
+      <md-content flex layout-padding layout="column">
+        <md-content flex>
+          <md-input-container>
+            <label>Font Size</label>
+            <md-select ng-model="currSize">
+              <md-option ng-repeat="size in mc.fontSize" ng-value="size">
+                {{size}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </md-content>
+          -->
+              <iframe name="hiddenFrame" class="hide"></iframe>
+              <form class="form-inline center-form" role="form" action="searchproject" method="GET" target="hiddenFrame">
+              <div class="row">
+                <div class="form-group ">
+                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
+                    <input type="text" class="form-control wide" name="search_string" id="search_string" placeholder="Enter Ulid or text in logs" aria-label="Text input"/>
+                  </div>
+                </div>
+                  <!--<button type="button" class="btn  btn-default"   id="view" (click)=”handleClick($event)” type=”button”>Find</button>-->
+                   <!-- <div class="dropdown bg-light clearfix">
+                      <button type="button" id="changeclr" class="btn  btn-default">
+                          <i class="fa fa-caret-down"></i>
+                      </button>
+                        <div class="dropdown-content">
+                          <a class="error" href="#error" id="btnerr" (click)=”handleClick($event)” type=”button”>ERROR</a>
+                          <a class="warning" href="#warning"id="btnwar" (click)=”handleClick($event)” type=”button”>WARNING</a>
+                          <a class="info" href="#info" id="btninf" (click)=”handleClick($event)” type=”button”>INFO</a>
+                          <a class="debug" href="#debug" id="btndbgs" (click)=”handleClick($event)” type=”button”>DEBUG</a>
+                          <a class="all" href="#all" id="btnall" (click)=”handleClick($event)” type=”button”>ALL</a>
+                        </div>
+                    </div> -->
+                  </div>
+                  </form>     
+                  <table id="testtable"></table>        
+          <!--  <button  id="view" (click)=”handleClick($event)” type=”button” >On start page</button> -->
+        <div ng-controller="mainController as mc" layout="column" ng-cloak> 
+     
+         <<template "card" .>>
+        <<template "wscontent" .>>
+        </div>
+      
+  </body>
+  <link rel="stylesheet" href="/css/angular-material.min.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/tablestyle.css">
+  <link rel="stylesheet" href="/css/engine.css">
+  <link rel="stylesheet" href="/css/MaterialIcons.css">
+  <link rel="stylesheet" href="/css/load.css">
+  <link rel="stylesheet" href="/css/daterangepicker.css">
+  <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <<template "footer" .>>
+
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-animate.min.js"></script>
+  <script src="/js/angular-messages.min.js"></script>
+  <script src="/js/angular-aria.min.js"></script>
+  <script src="/js/angular-ui-router.min.js"></script>
+  <script src="/js/angular-material.min.js"></script>
+  <script src="/js/ui-bootstrap.min.js"></script>
+  <script src="/js/ui-bootstrap-tpls.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/content.js"></script>
+  <script src="/js/pagination.js"></script>
+  <script src="/js/jquery-1.12.3.js"></script>
+  <script src="/js/jquery.dataTables.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Datapinker-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+  
+  <style type="text/css">
+  
+
+  
+    .scrollLock{
+    position: fixed;
+    }
+    md-sidenav, md-backdrop,  {
+    position: fixed !important;
+    }
+  </style>
+ 
+</html>
+<< end >>

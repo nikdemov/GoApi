@@ -1,0 +1,37 @@
+<<define "card">> 
+<html>
+
+      <md-content class="md-padding">
+      
+          <div layout="row" ng-hide="!showCard" class="ng-hide">
+            <md-content flex></md-content>
+            <md-card flex layout-align="center center">
+              <md-card-title>
+                <md-card-title-text>
+                 <iframe name="hiddenFrame" class="hide"></iframe>
+                  <form class="form-inline center-form" role="form" action="datestartend" method="GET" target="hiddenFrame">
+                 <input type="text" class="form-control wide" id="daterange"  name="daterange" placeholder="Enter Ulid or text in logs" aria-label="Text input" />
+                   </form>
+                      <script>
+                      $(function() {
+                        $('input[name="daterange"]').daterangepicker({
+                          opens: 'left'
+                        }, function(start, end, label) {
+                          console.log("A new date selection was made Unix timestamp: " + start + ' to ' + end );
+                        });
+                      });
+                      </script>  
+                  <span class="md-headline">Logi 2 service to view log</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+             
+                  <md-icon md-svg-icon="./img/ic_launch_black_24px.svg"></md-icon>
+                  </md-button>
+              </p>
+            </md-card>
+            <md-content flex></md-content>
+          </div>
+        </md-content>
+</html>
+<<end>>

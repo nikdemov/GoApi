@@ -1,0 +1,319 @@
+.crimson-text {
+    color: crimson;
+}
+
+.btn {
+    background-color: #ed6c27;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    height: 16px;
+    text-align: center;
+}
+
+.btnR {
+    background-color: #ed6c27;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    right: 100px;
+}
+
+.wide {
+    overflow: hidden !important;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    /*  */
+    position: fixed;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.error {
+    background-color: #ffb0b0;
+}
+
+.warning {
+    background-color: #ffff90;
+}
+
+.info {
+    background-color: #b0ffb0;
+}
+
+.debug {
+    background-color: #a0a0a0;
+}
+
+.all {
+    background-color: #ed6c27;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.contentP {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    padding: 25px;
+    background: #fff;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagtest {
+    position: absolute;
+    /*position: relative;*/
+    top: 70px;
+    display: block;
+    left: 38%;
+    /* Фиксированное положение */
+    /* Расстояние от правого края окна браузера */
+    /*top: 84%;*/
+    /* Расстояние сверху */
+    /* Поля вокруг текста */
+    /* Цвет фона */
+    /* Параметры рамки */
+}
+
+
+/* TEST PAGINATION */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+button {
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+.page-btn {
+    background: #ddd;
+    color: #2c303a;
+    height: 35px;
+    border-radius: 2px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background 0.3s ease;
+    margin: 0 2px
+}
+
+.page-btn:first-of-type {
+    margin-left: 0;
+}
+
+.page-btn:last-of-type {
+    margin-right: 0;
+}
+
+.page-btn:not([class$="-page"]) {
+    width: 35px;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.page-btn[class*="-page"] {
+    background: #ccc;
+    font-size: 0.6em;
+    font-weight: 700;
+}
+
+.page-btn.active {
+    background: #717790;
+    color: #fff;
+}
+
+.page-btn[disabled] {
+    opacity: 0.3;
+}
+
+
+/* TEST */
+
+.scale {
+    /* hide radio button */
+    position: fixed;
+    left: 100%;
+    top: 100%;
+    display: inline-block;
+    padding: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px;
+    margin: 0px 3px 0px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: black;
+    color: black;
+}
+
+.scale:checked+label {
+    /* selected styled */
+    background-color: #FE0200;
+    color: black;
+    text-shadow: 1px 1px 3px #8e8e8e;
+}
+
+.layout-padding {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+}
+
+.parent {
+    border: 1px solid black;
+    height: 200px;
+}
+
+.child {
+    height: 100px;
+    display: inline-block;
+    background: red;
+    width: 30%;
+}
+
+.headContent {
+    height: 9%;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.sysinfo {
+    font-size: 18px;
+}
+
+.pagination .tableList {
+    min-height: 250px;
+    text-indent: 20px;
+}
+
+.tableList .objectBlock {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pageButton {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.clickPageNumber {
+    background-color: lightgrey;
+    padding: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.pagination-block {
+    text-align: center;
+    width: 100%;
+}
+
+.pagination-block span {
+    display: inline-block;
+}
+
+.pagination-block .pageButton {
+    background-color: grey;
+    color: white;
+}
+
+.pagination-block span:hover {
+    cursor: pointer;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.outline-none {
+    outline: none;
+    user-select: none;
+}
+
+.highlight_row {
+    background-color: red;
+}
+
+.btnPrint {
+    width: 200px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #ffb0b0;
+    cursor: pointer;
+}
