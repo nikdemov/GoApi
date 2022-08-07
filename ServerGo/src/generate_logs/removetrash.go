@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
+	"nikworkedprofile/GoApi/src/logenc"
 )
 
 //Remove file in dir

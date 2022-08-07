@@ -9,8 +9,10 @@ import (
 	"syscall"
 	"time"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
-	"nikworkedprofile/GoApi/ServerGo/src/server"
+	logs "nikworkedprofile/GoApi/src/logs_app"
+	"nikworkedprofile/GoApi/src/server"
+
+	//logs "github.com/nikworkedprofile/GoApi/src/logs_app"
 
 	"github.com/kardianos/service"
 	"github.com/prometheus/client_golang/prometheus"

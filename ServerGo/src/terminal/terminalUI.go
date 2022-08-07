@@ -18,9 +18,9 @@ import (
 	"strings"
 	"time"
 
-	generator "nikworkedprofile/GoApi/ServerGo/src/generate_logs"
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
-	"nikworkedprofile/GoApi/ServerGo/src/web"
+	generator "nikworkedprofile/GoApi/src/generate_logs"
+	"nikworkedprofile/GoApi/src/logenc"
+	"nikworkedprofile/GoApi/src/web"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/fogleman/ease"

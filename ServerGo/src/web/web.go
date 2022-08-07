@@ -19,11 +19,11 @@ import (
 	"github.com/hpcloud/tail"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"nikworkedprofile/GoApi/ServerGo/src/generate_logs"
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
-	"nikworkedprofile/GoApi/ServerGo/src/web/controllers"
-	"nikworkedprofile/GoApi/ServerGo/src/web/util"
+	"nikworkedprofile/GoApi/src/generate_logs"
+	"nikworkedprofile/GoApi/src/logenc"
+	logs "nikworkedprofile/GoApi/src/logs_app"
+	"nikworkedprofile/GoApi/src/web/controllers"
+	"nikworkedprofile/GoApi/src/web/util"
 
 	"github.com/alecthomas/kingpin"
 	"github.com/gorilla/mux"
@@ -117,7 +117,7 @@ func ProcWeb(dir1 string, slice []string, ctx context.Context) (err error) {
 			uptime_server_web.Set(float64(uptime) / float64(time.Second))
 		}
 	}() */
-	go util.DiskInfo(pathdata + "/repdata")
+	//go util.DiskInfo(pathdata + "/repdata")
 	EnterIpReady(slice)
 	/* if status {
 		EnterIpReady(slice)

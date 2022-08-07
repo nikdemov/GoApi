@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 )
 
 // MakeAndStartCron - Creates a ticket with an interval of 'repeat' and pushes

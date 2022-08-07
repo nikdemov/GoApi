@@ -6,7 +6,6 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
-	"math/big"
 	"net"
 	"net/http"
 	"net/url"
@@ -15,12 +14,11 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-	"syscall"
 	"time"
 
-	"nikworkedprofile/GoApi/ServerGo/src/bleveSI"
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	"nikworkedprofile/GoApi/src/bleveSI"
+	"nikworkedprofile/GoApi/src/logenc"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 
 	"github.com/gorilla/websocket"
 	"github.com/hpcloud/tail"
@@ -736,19 +734,6 @@ type DiskStatus struct {
 	Free uint64 `json:"free"`
 }
 
-func DiskUsage(path string) (disk DiskStatus) {
-	fs := syscall.Statfs_t{}
-	err := syscall.Statfs(path, &fs)
-	if err != nil {
-		logs.ErrorLogger.Println("Disk usage: " + err.Error())
-		return
-	}
-	disk.All = fs.Blocks * uint64(fs.Bsize)
-	disk.Free = fs.Bfree * uint64(fs.Bsize)
-	disk.Used = disk.All - disk.Free
-	return
-}
-
 const (
 	B  = 1
 	KB = 1024 * B
@@ -771,27 +756,6 @@ var (
 		Help: "Disk free",
 	})
 )
-
-func DiskInfo(dir string) {
-	time.Sleep(time.Second * 55)
-	for {
-		disk := DiskUsage(dir)
-		x, y := big.NewFloat(float64(disk.All)/float64(GB)), big.NewFloat(float64(disk.Used)/float64(GB))
-		z := new(big.Float).Quo(y, x)
-		if z.Cmp(big.NewFloat(0.8)) == 1 || z.Cmp(big.NewFloat(0.8)) == 0 {
-			FindOldestfile(dir)
-
-		} else {
-
-			DeleteFile90(dir)
-		}
-		count_disk_usage.Set(float64(disk.Used) / float64(GB))
-		count_disk_memory.Set(float64(disk.All) / float64(GB))
-		count_disk_memory_free.Set(float64(disk.Free) / float64(GB))
-
-	}
-
-}
 
 func FindOldestfile(dir string) {
 	var name string

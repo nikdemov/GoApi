@@ -13,7 +13,7 @@ import (
 	"strings"
 	"sync"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 
 	"golang.org/x/net/html"
 )

@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"time"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
-	"nikworkedprofile/GoApi/ServerGo/src/web/util"
+	logs "nikworkedprofile/GoApi/src/logs_app"
+	"nikworkedprofile/GoApi/src/web/util"
 
 	"github.com/pelletier/go-toml"
 	"github.com/spf13/viper"

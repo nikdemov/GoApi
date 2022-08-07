@@ -11,7 +11,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 
 	"github.com/oklog/ulid/v2"
 )

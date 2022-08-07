@@ -5,8 +5,8 @@ import (
 	"net"
 	"strings"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
-	"nikworkedprofile/GoApi/ServerGo/src/web/util"
+	logs "nikworkedprofile/GoApi/src/logs_app"
+	"nikworkedprofile/GoApi/src/web/util"
 )
 
 func enterIp(c net.Conn) []string {

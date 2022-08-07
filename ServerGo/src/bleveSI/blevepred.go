@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"sync"
 
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
+	"nikworkedprofile/GoApi/src/logenc"
 
 	"github.com/blevesearch/bleve"
 )

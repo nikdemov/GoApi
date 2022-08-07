@@ -10,9 +10,9 @@ import (
 
 	"time"
 
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
-	"nikworkedprofile/GoApi/ServerGo/src/web/util"
+	"nikworkedprofile/GoApi/src/logenc"
+	logs "nikworkedprofile/GoApi/src/logs_app"
+	"nikworkedprofile/GoApi/src/web/util"
 
 	"github.com/Pallinder/go-randomdata"
 	"github.com/oklog/ulid/v2"

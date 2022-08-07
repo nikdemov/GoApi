@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
+	"nikworkedprofile/GoApi/src/logenc"
 )
 
 func BenchmarkCheckFileSum(b *testing.B) {

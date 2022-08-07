@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"sync"
 
-	"nikworkedprofile/GoApi/ServerGo/src/logenc"
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	"nikworkedprofile/GoApi/src/logenc"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 
 	"github.com/blevesearch/bleve"
 	"github.com/blevesearch/bleve/index/scorch"

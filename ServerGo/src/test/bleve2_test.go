@@ -6,7 +6,7 @@ package test
 import (
 	"testing"
 
-	"gitlab.topaz-atcs.com/tmcs/service/service/bleveSI"
+	"nikworkedprofile/GoApi/src/bleveSI"
 )
 
 func TestProcBleveScorch(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 
 	"github.com/gorilla/mux"
 	"github.com/shurcooL/httpfs/union"

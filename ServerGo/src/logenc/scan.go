@@ -9,7 +9,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	logs "nikworkedprofile/GoApi/ServerGo/src/logs_app"
+	logs "nikworkedprofile/GoApi/src/logs_app"
 )
 
 /* var (

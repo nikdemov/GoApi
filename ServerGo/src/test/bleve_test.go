@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"nikworkedprofile/GoApi/ServerGo/src/bleveSI"
+	"nikworkedprofile/GoApi/src/bleveSI"
 )
 
 func BenchmarkProcFileBleve(b *testing.B) {
