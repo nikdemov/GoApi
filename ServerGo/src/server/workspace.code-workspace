@@ -1,0 +1,17 @@
+{
+    "folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../service"
+		},
+		{
+			"path": "../../../client"
+		},
+		{
+			"path": "../../../flutter_application_1"
+		}
+	],
+    "settings": {}
+}
